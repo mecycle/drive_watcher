@@ -3,7 +3,7 @@ const app = express();
 app.use(express.json());
 
 app.post('/notifications', (req, res) => {
-    console.log('Received notification:', req.body);
+    console.log('Received notification:', req.headers, req.body);
     
     // Verify this is a valid notification
     const channelId = req.headers['x-goog-channel-id'];
